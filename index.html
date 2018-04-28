@@ -3,11 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>chat app</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <style media="screen">
+    body{
+      margin-top:30px;
+      min-height: 100%;
+    }
+    #messageArea{
+      display: none;
+    }
 
+    .footer {
+       position: sticky;
+       left: 0;
+       bottom:0;
+       top:auto;
+       width: 100%;
+       height: 8%;
+       background-color:#87CEFA;
+       color: white;
+       text-align: center;
+       margin-top: 720px;
+    }
+    .footer-block {
+    margin: 20px 0;
+    color:#FFFFFF;
+    font-size: 30px;
+    }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -100,11 +126,11 @@
         });
       });
     </script>
-
+    <footer class="footer">
+        <div class="container">
+          <p class="footer-block"><b>Build by Venkatesh Kadali</b></p>
+        </div>
+    </footer>
   </body>
-  <div class="footer">
-      <div class="container">
-        <p class="footer-block"><b>Build by Venkatesh Kadali</b></p>
-      </div>
-  </div>
+
 </html>

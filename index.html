@@ -3,17 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>chat app</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <style media="screen">
-      body{
-        margin-top:30px;
-      }
-      #messageArea{
-        display: none;
-      }
-    </style>
+
   </head>
   <body>
     <div class="container">
@@ -63,6 +57,7 @@
 
     </div>
 
+
     <script>
       $(function(){
         var socket=io.connect();
@@ -98,7 +93,7 @@
         });
         socket.on('get users', function(data){
           var html = '';
-          for(i=0; i<data.length; i++){
+          for(i=1; i<data.length; i++){
             html+= '<li class="list-group-item">' +data[i]+'</li>';
           }
           $users.html(html);
@@ -107,4 +102,9 @@
     </script>
 
   </body>
+  <div class="footer">
+      <div class="container">
+        <p class="footer-block"><b>Build by Venkatesh Kadali</b></p>
+      </div>
+  </div>
 </html>
